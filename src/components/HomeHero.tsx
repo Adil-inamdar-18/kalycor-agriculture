@@ -20,7 +20,7 @@ export function HomeHero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_75%_80%,#1F4A2B_0%,#0F2417_60%)]" />
       <div className="wrap grid w-full items-end gap-8 pb-16 pt-32 lg:grid-cols-[1.25fr_0.75fr] lg:pb-0 lg:pt-28">
         <div className="pb-4 lg:pb-24">
-          <p className="mb-6 text-base font-medium text-sprout">Kalycor Agriculture</p>
+          <p className="mb-6 text-base font-medium text-sprout">Naturiza Agro</p>
           <h1 className="h-display" aria-label="From Seed to Harvest, Growing Possibilities.">
             {words.map((w, i) => (
               <span key={i} className="mr-[0.22em] inline-block overflow-hidden align-bottom" aria-hidden>
