@@ -38,7 +38,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="wrap flex flex-col gap-3 py-6 text-sm text-paper/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Kalycor Agriculture. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Naturiza Agro. All rights reserved.</p>
           <ul className="flex gap-6"><li><Link href="/privacy" className="hover:text-sprout">Privacy Policy</Link></li><li><Link href="/terms" className="hover:text-sprout">Terms &amp; Conditions</Link></li></ul>
         </div>
       </div>

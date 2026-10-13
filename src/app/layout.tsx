@@ -8,14 +8,14 @@ import { SITE_URL } from "@/content/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Kalycor Agriculture | Seeds, Agricultural Products and Crop Lifecycle", template: "%s | Kalycor Agriculture" },
-  description: "Kalycor Agriculture focuses on agricultural products and the complete crop lifecycle, from seeds through growth, harvest, processing and distribution.",
+  title: { default: "Naturiza Agro | Seeds, Agricultural Products and Crop Lifecycle", template: "%s | Naturiza Agro" },
+  description: "Naturiza Agro focuses on agricultural products and the complete crop lifecycle, from seeds through growth, harvest, processing and distribution.",
   robots: { index: true, follow: true },
-  openGraph: { type: "website", siteName: "Kalycor Agriculture", title: "Kalycor Agriculture", description: "From seed to harvest, growing possibilities.", images: ["/images/agri-field.jpg"] },
+  openGraph: { type: "website", siteName: "Naturiza Agro", title: "Naturiza Agro", description: "From seed to harvest, growing possibilities.", images: ["/images/agri-field.jpg"] },
 };
 export const viewport: Viewport = { themeColor: "#0F2417", width: "device-width", initialScale: 1 };
 
-const orgLd = { "@context": "https://schema.org", "@type": "Organization", name: "Kalycor Agriculture", url: SITE_URL, parentOrganization: { "@type": "Organization", name: "Kalycor" } };
+const orgLd = { "@context": "https://schema.org", "@type": "Organization", name: "Naturiza Agro", url: SITE_URL, parentOrganization: { "@type": "Organization", name: "Kalycor" } };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

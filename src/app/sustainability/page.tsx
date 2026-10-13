@@ -5,7 +5,7 @@ import { CTABand } from "@/components/Sections";
 import { ImageReveal } from "@/components/Reveal";
 import { Placeholder } from "@/components/Placeholder";
 import { sustainability } from "@/content/site";
-export const metadata = pageMeta("Sustainability", "Kalycor Agriculture's approach to responsible agriculture, resource efficiency, sustainable practices and quality.", "/sustainability");
+export const metadata = pageMeta("Sustainability", "Naturiza Agro's approach to responsible agriculture, resource efficiency, sustainable practices and quality.", "/sustainability");
 export default function Sustainability() {
   return (<>
     <PageHero title="Sustainability" intro="Responsible agriculture, described honestly. No claim appears here until the client confirms it." />

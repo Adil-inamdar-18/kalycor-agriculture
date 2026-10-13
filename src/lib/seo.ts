@@ -5,7 +5,7 @@ export function pageMeta(title: string, description: string, path: string): Meta
   return {
     title, description,
     alternates: { canonical: path },
-    openGraph: { title: `${title} | Kalycor Agriculture`, description, url: `${SITE_URL}${path}`, siteName: "Kalycor Agriculture", type: "website", locale: "en", images: [{ url: "/images/agri-field.jpg", width: 735, height: 490, alt: "Green wheat crop in a field" }] },
-    twitter: { card: "summary_large_image", title: `${title} | Kalycor Agriculture`, description },
+    openGraph: { title: `${title} | Naturiza Agro`, description, url: `${SITE_URL}${path}`, siteName: "Naturiza Agro", type: "website", locale: "en", images: [{ url: "/images/agri-field.jpg", width: 735, height: 490, alt: "Green wheat crop in a field" }] },
+    twitter: { card: "summary_large_image", title: `${title} | Naturiza Agro`, description },
   };
 }

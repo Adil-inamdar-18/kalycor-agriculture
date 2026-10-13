@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { CTABand, Intro } from "@/components/Sections";
 import { Placeholder } from "@/components/Placeholder";
 import { solutions } from "@/content/site";
-export const metadata = pageMeta("Agricultural Solutions", "Agricultural solutions from Kalycor Agriculture across the crop lifecycle, from seed supply to distribution.", "/solutions");
+export const metadata = pageMeta("Agricultural Solutions", "Agricultural solutions from Naturiza Agro across the crop lifecycle, from seed supply to distribution.", "/solutions");
 export default function Solutions() {
   return (<>
     <PageHero title="Agricultural Solutions" intro="Ways we can support your operation. The exact service list should be confirmed with the client." />

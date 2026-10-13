@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { LifecycleScroll } from "@/components/LifecycleScroll";
 import { CTABand } from "@/components/Sections";
 import { lifecycle } from "@/content/site";
-export const metadata = pageMeta("Crop Lifecycle", "Follow the complete crop lifecycle with Kalycor Agriculture: seed, soil preparation, sowing, germination, growth, crop care, harvest, processing and distribution.", "/crop-lifecycle");
+export const metadata = pageMeta("Crop Lifecycle", "Follow the complete crop lifecycle with Naturiza Agro: seed, soil preparation, sowing, germination, growth, crop care, harvest, processing and distribution.", "/crop-lifecycle");
 export default function Lifecycle() {
   return (<>
     <PageHero title="The Complete Crop Lifecycle" intro="Nine stages, from seed to distribution. Scroll to watch a crop grow through them." />
