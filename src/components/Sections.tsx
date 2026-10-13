@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "./Button";
 import { Placeholder } from "./Placeholder";
 import { ImageReveal, Reveal } from "./Reveal";
-import { why, sustainability, processSteps } from "@/content/site";
+import { why, sustainability, processSteps, SHOW_PLACEHOLDERS } from "@/content/site";
 
 const tints = ["#2B6238", "#5E9B3A", "#9C7A27", "#3A2A1E", "#1F4A2B", "#6B8F3A"];
 
@@ -28,7 +28,7 @@ export function AboutSplit({ cta = true }: { cta?: boolean }) {
   return (
     <section className="py-24 sm:py-32">
       <div className="wrap grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <ImageReveal className="relative aspect-[4/5] overflow-hidden rounded-[2rem] rounded-br-[6rem]"><Image src="/images/agri-field.jpg" alt="Green wheat crop growing in an open field" fill sizes="(min-width:1024px) 45vw, 100vw" className="object-cover" /></ImageReveal>
+        <ImageReveal className="relative aspect-[4/5] overflow-hidden rounded-[2rem] rounded-br-[6rem]"><Image src="/images/agricorn.jpg" alt="Green wheat crop growing in an open field" fill sizes="(min-width:1024px) 45vw, 100vw" className="object-cover" /></ImageReveal>
         <Reveal>
           <h2 className="h-section text-forest-900">An agriculture business built around the whole crop journey.</h2>
           <p className="lead mt-6 text-stone">Naturiza Agro is part of the Kalycor group. It focuses on agricultural products and the complete crop lifecycle, starting from seeds and following the crop through each stage of growth.</p>
@@ -77,19 +77,81 @@ export function ProcessTimeline({ dark = false }: { dark?: boolean }) {
   );
 }
 
+const whyIcons = [
+  <path key="q" d="M12 21c0-6 1-9 6-13-6 0-10 3-10 8m4 5c0-4-2-7-6-8 0 5 2 8 6 8Z" />,
+  <path key="r" d="M12 3 4.5 6v5.5c0 4.5 3 8 7.5 9.5 4.5-1.5 7.5-5 7.5-9.5V6L12 3Zm-3 8.5 2.2 2.2L15.5 9.5" />,
+  <path key="a" d="M12 21v-9m0 0c0-3-2-5-5-5 0 3 2 5 5 5Zm0 2c0-3 2-5 5-5 0 3-2 5-5 5ZM4 21h16" />,
+  <path key="p" d="M3 17a3 3 0 1 0 6 0 3 3 0 0 0-6 0Zm11 1.5a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0ZM9 17h5m-6-3V8h5l2 4h4v4M6 8V5h3" />,
+  <path key="s" d="M4 14v-2a8 8 0 0 1 16 0v2M4 14h3v5H4v-5Zm13 0h3v5h-3v-5Zm0 5c0 1.5-2 2-5 2" />,
+];
+
+function WhyIcon({ index }: { index: number }) {
+  return (
+    <svg viewBox="0 0 24 24" className="h-7 w-7 fill-none stroke-forest-800 stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]" aria-hidden>
+      {whyIcons[index % whyIcons.length]}
+    </svg>
+  );
+}
+
+function LeafDecor({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 100 100" className={`pointer-events-none absolute fill-sprout/30 ${className}`} aria-hidden>
+      <path d="M10 95C10 45 40 10 95 5 95 55 60 90 10 95Z" />
+    </svg>
+  );
+}
+
 export function WhyGrid() {
   return (
-    <section className="bg-mist py-24 sm:py-32">
-      <div className="wrap">
-        <Intro title="Why choose Naturiza Agro"><p>Every point below is editable and should be replaced with claims the business can stand behind.</p></Intro>
-        <dl className="mt-14 grid gap-px overflow-hidden rounded-3xl bg-forest-900/15 sm:grid-cols-2 lg:grid-cols-3">
+    <section className="relative overflow-hidden bg-gradient-to-b from-paper to-white pb-20 pt-10 sm:pb-28 sm:pt-14">
+      <LeafDecor className="-left-10 top-10 h-40 w-40 opacity-70" />
+      <div className="wrap relative">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_1fr]">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full bg-sprout/30 px-4 py-1.5 text-sm font-semibold text-forest-700">
+              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-leaf" aria-hidden><path d="M20 4C9 4 4 10 4 17c0 1 .2 2 .5 3C6 14 10 11 14 10c-3 2-6 5-7 9 7 0 13-5 13-15Z" /></svg>
+              Our Values
+            </span>
+            <h2 className="h-section mt-5 text-forest-950">
+              Why choose
+              <span className="block text-leaf">Naturiza Agro</span>
+            </h2>
+            <p className="lead mt-5 max-w-xl text-stone">Every point below is editable and should be replaced with claims the business can stand behind.</p>
+            <span className="mt-6 block h-1 w-14 rounded-full bg-leaf" />
+          </Reveal>
+          <ImageReveal className="relative h-64 overflow-hidden rounded-[3rem] rounded-tl-[8rem] rounded-br-[10rem] lg:h-72">
+            <Image src="/images/agrifield.jpg" alt="Green crop rows in an open field" fill sizes="(min-width:1024px) 45vw, 100vw" className="object-cover" />
+          </ImageReveal>
+        </div>
+
+        <dl className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {why.map((w, i) => (
-            <div key={w.title} className={`bg-paper p-8 transition-colors duration-300 hover:bg-white ${i === 0 ? "lg:col-span-1" : ""}`}>
-              <dt className="font-display text-2xl font-semibold text-forest-900">{w.title}</dt>
-              <dd className="mt-3 text-stone">{w.text}</dd>
-              <Placeholder className="mt-4" />
-            </div>
+            <Reveal key={w.title} delay={i * 0.05}>
+              <div className="group relative h-full overflow-hidden rounded-2xl bg-white/80 p-6 shadow-[0_8px_30px_-12px_rgba(23,54,31,0.25)] ring-1 ring-forest-900/5 transition duration-300 hover:-translate-y-1 hover:bg-white">
+                <LeafDecor className="-bottom-4 -right-4 h-24 w-24 transition-transform duration-500 group-hover:scale-110" />
+                <div className="relative flex gap-5">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-sprout/30"><WhyIcon index={i} /></span>
+                  <div>
+                    <dt className="font-display text-xl font-semibold text-forest-900">{w.title}</dt>
+                    <span className="mt-2 block h-0.5 w-6 rounded-full bg-forest-700" />
+                    <dd className="mt-3 text-[15px] leading-relaxed text-stone">{w.text}</dd>
+                    {SHOW_PLACEHOLDERS && (
+                      <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-sprout/30 px-3 py-1 text-xs font-semibold text-forest-800">Placeholder <span aria-hidden>→</span></span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           ))}
+          <Reveal delay={why.length * 0.05}>
+            <div className="relative h-full min-h-[11rem] overflow-hidden rounded-2xl">
+              <Image src="/images/agrifield.jpg" alt="" fill sizes="(min-width:1024px) 30vw, 100vw" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-r from-forest-900/90 via-forest-800/60 to-transparent" />
+              <p className="relative flex h-full items-center p-8 font-display text-2xl font-medium italic leading-snug text-paper">
+                Better Farming<br />Brighter Future
+              </p>
+            </div>
+          </Reveal>
         </dl>
       </div>
     </section>
