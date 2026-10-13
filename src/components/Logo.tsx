@@ -6,27 +6,16 @@ export function Logo({ light = false }: { light?: boolean }) {
     <Link
       href="/"
       aria-label="Naturiza Agro home"
-      className="flex shrink-0 items-center gap-1.5"
+      className="flex shrink-0 items-center"
     >
-      <span className="flex h-16 w-16 shrink-0 items-center justify-center">
-        <Image
-          src="/images/kalycor-logo-3.png"
-          alt=""
-          width={80}
-          height={80}
-          className="h-16 w-16 object-contain"
-          priority
-        />
-      </span>
-
-      <span
-        className={`whitespace-nowrap font-display text-2xl font-bold leading-none tracking-tight sm:text-3xl ${
-          light ? "text-paper" : "text-forest-900"
-        }`}
-      >
-        Naturiza{" "}
-        <span className={light ? "text-sprout" : "text-leaf"}>Agro</span>
-      </span>
+      <Image
+        src="/images/logo-4.png"
+        alt="Naturiza Agro"
+        width={240}
+        height={160}
+        className="h-24 w-36 shrink-0 object-contain sm:h-28 sm:w-48"
+        priority
+      />
     </Link>
   );
 }
