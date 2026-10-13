@@ -1,26 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
+
 export function Logo({ light = false }: { light?: boolean }) {
   return (
     <Link
       href="/"
-      aria-label="Kalycor Agriculture home"
-      className="flex items-center gap-2.5"
+      aria-label="Naturiza Agro home"
+      className="flex shrink-0 items-center gap-1.5"
     >
-      <span className="flex h-10 w-12 items-center justify-center rounded-lg bg-paper">
+      <span className="flex h-16 w-16 shrink-0 items-center justify-center">
         <Image
-          src="/images/kalycor-logo.png"
+          src="/images/kalycor-logo-2.png"
           alt=""
-          width={40}
-          height={31}
-          className="h-7 w-auto"
+          width={80}
+          height={80}
+          className="h-16 w-16 object-contain"
           priority
         />
       </span>
+
       <span
-        className={`font-display text-xl font-semibold leading-none ${light ? "text-paper" : "text-forest-900"}`}
+        className={`whitespace-nowrap font-display text-2xl font-bold leading-none tracking-tight sm:text-3xl ${
+          light ? "text-paper" : "text-forest-900"
+        }`}
       >
-        Naturiza {" "}
+        Naturiza{" "}
         <span className={light ? "text-sprout" : "text-leaf"}>Agro</span>
       </span>
     </Link>
