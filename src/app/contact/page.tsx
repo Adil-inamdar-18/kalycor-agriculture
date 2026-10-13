@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "./ContactForm";
 import { site } from "@/content/site";
 import { Placeholder } from "@/components/Placeholder";
-export const metadata = pageMeta("Contact Us", "Contact Kalycor Agriculture about agricultural products, seeds and crop lifecycle solutions.", "/contact");
+export const metadata = pageMeta("Contact Us", "Contact Naturiza Agro about agricultural products, seeds and crop lifecycle solutions.", "/contact");
 export default function Contact() {
   return (<>
     <PageHero title="Contact Us" intro="Tell us what you want to grow, source or supply." />

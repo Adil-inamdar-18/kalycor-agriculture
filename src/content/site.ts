@@ -14,7 +14,7 @@ export const site = {
   group: "Kalycor",
   tagline: "From seed to harvest, growing possibilities.",
   description:
-    "Kalycor Agriculture focuses on agricultural products and the complete crop lifecycle, from seed to distribution.",
+    "Naturiza Agro focuses on agricultural products and the complete crop lifecycle, from seed to distribution.",
   contact: {
     phone: "+00 000 000 0000",
     email: "hello@kalycoragriculture.com",

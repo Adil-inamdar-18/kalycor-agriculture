@@ -31,7 +31,7 @@ export function AboutSplit({ cta = true }: { cta?: boolean }) {
         <ImageReveal className="relative aspect-[4/5] overflow-hidden rounded-[2rem] rounded-br-[6rem]"><Image src="/images/agri-field.jpg" alt="Green wheat crop growing in an open field" fill sizes="(min-width:1024px) 45vw, 100vw" className="object-cover" /></ImageReveal>
         <Reveal>
           <h2 className="h-section text-forest-900">An agriculture business built around the whole crop journey.</h2>
-          <p className="lead mt-6 text-stone">Kalycor Agriculture is part of the Kalycor group. It focuses on agricultural products and the complete crop lifecycle, starting from seeds and following the crop through each stage of growth.</p>
+          <p className="lead mt-6 text-stone">Naturiza Agro is part of the Kalycor group. It focuses on agricultural products and the complete crop lifecycle, starting from seeds and following the crop through each stage of growth.</p>
           <p className="mt-4 text-stone">Company history, scale and team details will be added here once confirmed. <Placeholder /></p>
           {cta && <Button href="/about" className="mt-8">Discover Our Agriculture Business</Button>}
         </Reveal>
@@ -81,7 +81,7 @@ export function WhyGrid() {
   return (
     <section className="bg-mist py-24 sm:py-32">
       <div className="wrap">
-        <Intro title="Why choose Kalycor Agriculture"><p>Every point below is editable and should be replaced with claims the business can stand behind.</p></Intro>
+        <Intro title="Why choose Naturiza Agro"><p>Every point below is editable and should be replaced with claims the business can stand behind.</p></Intro>
         <dl className="mt-14 grid gap-px overflow-hidden rounded-3xl bg-forest-900/15 sm:grid-cols-2 lg:grid-cols-3">
           {why.map((w, i) => (
             <div key={w.title} className={`bg-paper p-8 transition-colors duration-300 hover:bg-white ${i === 0 ? "lg:col-span-1" : ""}`}>
