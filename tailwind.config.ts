@@ -5,7 +5,12 @@ const config: Config = {
     extend: {
       colors: {
         humus: "#1F1912",
-        forest: { 950: "#0F2417", 900: "#17361F", 800: "#1F4A2B", 700: "#2B6238" },
+        forest: {
+          950: "#0F2417",
+          900: "#17361F",
+          800: "#1F4A2B",
+          700: "#2B6238",
+        },
         leaf: { DEFAULT: "#5E9B3A", light: "#8BC34A" },
         sprout: "#B5D86A",
         wheat: { DEFAULT: "#D9B65A", deep: "#9C7A27" },

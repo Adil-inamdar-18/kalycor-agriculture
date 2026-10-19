@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-/** Dark, compact hero used on every inner page. Pairs with the transparent header. */
 export function PageHero({
   title,
   intro,
@@ -10,7 +9,7 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-forest-950 pb-20 pt-40 text-paper sm:pb-28 sm:pt-48">
+    <section className="relative overflow-hidden bg-forest-950 pb-16 pt-32 text-paper sm:pb-28 sm:pt-48">
       <svg
         aria-hidden
         className="absolute inset-x-0 bottom-0 h-24 w-full text-forest-900"
@@ -28,7 +27,7 @@ export function PageHero({
         ))}
       </svg>
       <div className="wrap relative">
-        <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[1] sm:text-7xl">
+        <h1 className="max-w-4xl break-words font-display text-[clamp(2.25rem,11vw,3rem)] font-semibold leading-[1] sm:text-7xl">
           {title}
         </h1>
         <p className="lead mt-6 max-w-2xl text-paper/75">{intro}</p>
