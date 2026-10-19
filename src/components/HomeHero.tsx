@@ -28,16 +28,12 @@ export function HomeHero() {
   }, [progress, reduce]);
 
   return (
-    <section
-      id="home"
-      className="relative isolate flex min-h-[100svh] w-full items-center overflow-hidden bg-forest-950 text-paper"
-    >
+    <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden lg:h-[100svh] lg:min-h-[620px] bg-forest-950 text-paper">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_75%_80%,#1F4A2B_0%,#0F2417_60%)]" />
-
-      <div className="wrap grid w-full grid-cols-1 items-center gap-8 pb-12 pt-28 sm:pt-32 lg:min-h-[100svh] lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-16 lg:pt-28">
-        <div className="relative z-10 min-w-0">
+      <div className="wrap grid w-full items-end gap-8 pb-16 pt-32 lg:grid-cols-[1.25fr_0.75fr] lg:pb-0 lg:pt-28">
+        <div className="pb-4 lg:pb-16">
           <h1
-            className="h-display text-[length:clamp(2.5rem,min(8vw,10.5vh),7.5rem)]"
+            className="h-display lg:text-[length:clamp(2.5rem,min(8vw,calc((max(100svh,620px)_-_25rem)/3.8)),7.5rem)]"
             aria-label="From Seed to Harvest, Growing Possibilities."
           >
             {words.map((w, i) => (
@@ -85,15 +81,12 @@ export function HomeHero() {
             </Button>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={reduce ? false : { opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 1 }}
-          className="relative mx-auto w-full max-w-[280px] sm:max-w-[340px] lg:max-w-none"
-        >
-          <PlantArt progress={progress} className="block h-auto w-full" />
-        </motion.div>
+        <div className="mx-auto w-full max-w-[360px] self-end lg:max-w-none">
+          <PlantArt
+            progress={progress}
+            className="mx-auto h-auto max-h-[calc(100svh-7rem)] w-full"
+          />
+        </div>
       </div>
     </section>
   );
