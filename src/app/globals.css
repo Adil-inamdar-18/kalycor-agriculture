@@ -3,20 +3,64 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body { @apply bg-paper font-sans text-humus antialiased; overflow-x: hidden; }
-  h1, h2, h3, h4 { @apply font-display; letter-spacing: -0.02em; text-wrap: balance; }
-  p { text-wrap: pretty; }
-  :focus-visible { outline: 2px solid #8BC34A; outline-offset: 3px; border-radius: 4px; }
-  ::selection { background: #B5D86A; color: #0F2417; }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper font-sans text-humus antialiased;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid #8bc34a;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: #b5d86a;
+    color: #0f2417;
+  }
 }
 @layer components {
-  .wrap { @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12; }
-  .h-display { @apply font-display font-semibold leading-[0.95]; font-size: clamp(2.75rem, 8vw, 7.5rem); }
-  .h-section { @apply font-display font-semibold leading-[1.02]; font-size: clamp(2rem, 4.6vw, 4rem); }
-  .lead { @apply text-lg leading-relaxed sm:text-xl; }
+  .wrap {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12;
+  }
+  .h-display {
+    @apply font-display font-semibold leading-[0.95];
+    font-size: clamp(2.125rem, 11vw, 2.75rem);
+  }
+  .h-section {
+    @apply font-display font-semibold leading-[1.02];
+    font-size: clamp(2rem, 4.6vw, 4rem);
+  }
+  .lead {
+    @apply text-lg leading-relaxed sm:text-xl;
+  }
+}
+@media (min-width: 550px) {
+  .h-display {
+    font-size: clamp(2.75rem, 8vw, 7.5rem);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -37,7 +37,7 @@ export function Header() {
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={cn(
-                  "flex items-center rounded-full px-4 py-2 text-[15px] font-medium text-forest-900 transition-colors hover:bg-mist",
+                  "flex items-center rounded-full px-3 py-2 text-[15px] font-medium text-forest-900 transition-colors hover:bg-mist xl:px-4",
                   isActive(item.href) &&
                     "underline decoration-leaf decoration-2 underline-offset-8",
                 )}
@@ -68,7 +68,7 @@ export function Header() {
             <button
               type="button"
               aria-haspopup="true"
-              className="rounded-full px-4 py-2 text-[15px] font-medium text-forest-900 transition-colors hover:bg-mist"
+              className="rounded-full px-3 py-2 text-[15px] font-medium text-forest-900 transition-colors hover:bg-mist xl:px-4"
             >
               Our Businesses
             </button>

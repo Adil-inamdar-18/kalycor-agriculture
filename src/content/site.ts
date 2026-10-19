@@ -1,9 +1,3 @@
-/**
- * EDITABLE SITE CONTENT.
- * Anything marked `placeholder: true` has NOT been supplied by the client and
- * must be replaced before launch. No statistics, clients, certifications or
- * product specifications are invented here.
- */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://kalycoragriculture.com";
 export const SHOW_PLACEHOLDERS =
@@ -78,7 +72,6 @@ export const businesses = [
   },
 ];
 
-/** The nine lifecycle stages from the brief. Descriptions are generic and editable. */
 export const lifecycle = [
   {
     id: "seed",

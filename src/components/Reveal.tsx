@@ -2,8 +2,15 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
-/** Used sparingly: for image reveals and a few key blocks, not every section. */
-export function Reveal({ children, delay = 0, className }: { children: ReactNode; delay?: number; className?: string }) {
+export function Reveal({
+  children,
+  delay = 0,
+  className,
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   const reduce = useReducedMotion();
   return (
     <motion.div
@@ -18,8 +25,13 @@ export function Reveal({ children, delay = 0, className }: { children: ReactNode
   );
 }
 
-/** Photo that unveils with a clip-path wipe. */
-export function ImageReveal({ children, className }: { children: ReactNode; className?: string }) {
+export function ImageReveal({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   const reduce = useReducedMotion();
   return (
     <motion.div
